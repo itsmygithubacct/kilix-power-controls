@@ -1,0 +1,4 @@
+#!/bin/sh
+set -eu
+power_source=$(dirname "$(readlink -f "$0")")
+exec /usr/bin/python3 -B "$power_source/main.py" "$@"
